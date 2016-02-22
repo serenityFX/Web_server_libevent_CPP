@@ -5,3 +5,5 @@ project(final_x)
 set(CMAKE_CXX_FLAGS "-std=c++11 -pthread")
 set(SOURCE main.cpp http_server.cpp )
 add_executable(final ${SOURCE})
+target_link_libraries(final event event_core event_extra)
+
