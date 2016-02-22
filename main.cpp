@@ -71,6 +71,7 @@ int main(int argc, char *argv[])
 	std::string		SrvAddress;
 	std::string		RootDir;
 	std::uint16_t	SrvPort;
+	int opt = 0;
 
 	while ((opt = getopt(argc, argv, "h:p:d")) != -1) {
 		switch (opt) {
