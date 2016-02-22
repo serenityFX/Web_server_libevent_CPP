@@ -73,16 +73,16 @@ int main(int argc, char *argv[])
 	std::uint16_t	SrvPort;
 	int opt = 0;
 
-	while ((opt = getopt(argc, argv, "h:p:d")) != -1) {
+	while ((opt = getopt(argc, argv, "h:p:d:")) != -1) {
 		switch (opt) {
 		case 'h':
-			SrvAddress = std::string(optarg);
+			SrvAddress.assign(optarg);
 			break;
 		case 'p':
 			SrvPort = atoi(optarg);
 			break;
 		case 'd':
-			RootDir = std::string(optarg);
+			RootDir.assign(optarg);
 			break;
 		default: /* '?' */
 			fprintf(stderr, "Usage: %s -h <ip> -p <port> -d <directory>\n",
